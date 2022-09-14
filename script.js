@@ -72,7 +72,7 @@ const gameOver = () => {
     // so total time taken is current time - start time
     const finishTime = new Date().getTime();
     const timeTaken = (finishTime - startTime) / 1000;
-    const timeTakenInteger = parseInt(timeTaken)
+    const timeTakenInteger = parseInt(timeTaken);
 
     // show result modal
     resultModal.innerHTML = "";
@@ -81,7 +81,7 @@ const gameOver = () => {
     // clear user text
     display.innerHTML = "";
     // make it inactive
-    display.classList.add("inactive");
+    display.classList.remove("inactive");
     // show result
     resultModal.innerHTML += `
     <h1>Finished!</h1>
@@ -97,6 +97,9 @@ const gameOver = () => {
     errorCount = 0;
     userText = "";
     display.classList.add("inactive");
+    if (startTime === null) {
+        document.getElementById("show-time").innerHTML = `0 seconds`;
+    }
 };
 
 const closeModal = () => {
@@ -139,8 +142,10 @@ setInterval(() => {
     const currentTime = new Date().getTime();
     const timeSpent = (currentTime - startTime) / 1000;
     const timeSpentInteger = parseInt(timeSpent);
-
-    document.getElementById("show-time").innerHTML = `${
-        timeSpentInteger ? timeSpentInteger : 0
-    } seconds`;
+   
+    if (startTime !== null) {
+        document.getElementById("show-time").innerHTML = `${
+            timeSpentInteger ? timeSpentInteger : 0
+        } seconds`;
+    }
 }, 1000);
