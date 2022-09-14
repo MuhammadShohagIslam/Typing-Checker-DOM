@@ -10,14 +10,37 @@ body {
     background-position: left top;
     font-family: "Zilla Slab", serif;
 }
+a,ul{
+    list-style-type: none;
+    text-decoration: none;
+}
 
 .box-container {
     width: 70%;
     margin: 0 auto;
 }
-
+header{
+    background: linear-gradient( 92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85% );
+    padding: 25px 0px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+.navbar .navbar-item .nav-link{
+    padding-right: 13px;
+    color: #ffff;
+    font-size: 24px;
+    transition: all .3s;
+}
+.navbar .navbar-item:hover .nav-link{
+    color: #9dffad;
+}
+#active{
+    color: #9dffad;
+}
 #question {
-    height: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +55,7 @@ body {
     );
     backdrop-filter: blur(5px);
     margin-bottom: 30px;
+    padding: 21px 24px;
 }
 
 #display {
@@ -180,6 +204,39 @@ button {
     position: fixed;
     top: 0;
 }
+/* Start Blog */
+.blog-areas{
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    margin-top: 35px;
+}
+.single-blog{
+    margin-bottom: 25px;
+    background: linear-gradient(
+        92.49deg,
+        rgba(255, 255, 255, 0.1) 0.18%,
+        rgba(255, 255, 255, 0.05) 99.85%
+    );
+    padding: 20px 25px; 
+}
+.single-blog h2{
+    color: #ffff;
+    font-size: 25px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.single-blog p{
+    color: #ffff;
+    font-size: 18px;
+    font-weight: 400;
+}
+.single-blog span{
+    color: #9dffad;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* End Blog */
 
 @media only screen and (max-width: 700px) {
     .box-container {
