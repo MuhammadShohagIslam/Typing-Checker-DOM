@@ -10,7 +10,8 @@ body {
     background-position: left top;
     font-family: "Zilla Slab", serif;
 }
-a,ul{
+a,
+ul {
     list-style-type: none;
     text-decoration: none;
 }
@@ -19,24 +20,28 @@ a,ul{
     width: 70%;
     margin: 0 auto;
 }
-header{
-    background: linear-gradient( 92.49deg, rgba(255, 255, 255, 0.1) 0.18%, rgba(255, 255, 255, 0.05) 99.85% );
+header {
+    background: linear-gradient(
+        92.49deg,
+        rgba(255, 255, 255, 0.1) 0.18%,
+        rgba(255, 255, 255, 0.05) 99.85%
+    );
     padding: 25px 0px;
 }
 .navbar {
     display: flex;
     justify-content: center;
 }
-.navbar .navbar-item .nav-link{
+.navbar .navbar-item .nav-link {
     padding-right: 13px;
     color: #ffff;
     font-size: 24px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
-.navbar .navbar-item:hover .nav-link{
+.navbar .navbar-item:hover .nav-link {
     color: #9dffad;
 }
-#active{
+#active {
     color: #9dffad;
 }
 #question {
@@ -59,11 +64,11 @@ header{
 }
 
 #display {
-    height: 100px;
+    min-height: 100px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 5rem;
+    padding: 11px 11px 13px 5rem;
     color: white;
     font-size: 32px;
     background-color: #171717;
@@ -205,45 +210,36 @@ button {
     top: 0;
 }
 /* Start Blog */
-.blog-areas{
+.blog-areas {
     display: flex;
     flex-direction: column;
     min-height: 300px;
     margin-top: 35px;
 }
-.single-blog{
+.single-blog {
     margin-bottom: 25px;
     background: linear-gradient(
         92.49deg,
         rgba(255, 255, 255, 0.1) 0.18%,
         rgba(255, 255, 255, 0.05) 99.85%
     );
-    padding: 20px 25px; 
+    padding: 20px 25px;
 }
-.single-blog h2{
+.single-blog h2 {
     color: #ffff;
     font-size: 25px;
     font-weight: 500;
     padding-bottom: 20px;
 }
-.single-blog p{
+.single-blog p {
     color: #ffff;
     font-size: 18px;
     font-weight: 400;
 }
-.single-blog span{
+.single-blog span {
     color: #9dffad;
     font-size: 18px;
     font-weight: 500;
-}
-/* End Blog */
+} /* End Blog */
 
-@media only screen and (max-width: 700px) {
-    .box-container {
-        padding: 0 20px;
-        width: 100%;
-    }
-    .card {
-        flex-direction: column;
-    }
-}
+

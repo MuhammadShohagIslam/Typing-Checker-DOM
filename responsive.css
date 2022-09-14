@@ -1,8 +1,16 @@
 /* Start Small Devices */
 @media only screen and (max-width: 767px) {
-  
-}
-/* End Small Devices */
+    .box-container {
+        padding: 0 20px;
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .single-blog h2 {
+        font-size: 22px;
+    }
+} /* End Small Devices */
 
 /* Start Medium Devices */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -14,8 +22,7 @@
         flex-direction: column;
         margin-bottom: 21px;
     }
-}
-/* End Medium Devices */
+} /* End Medium Devices */
 
 /* Start Large Devices */
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -27,5 +34,4 @@
         flex-direction: column;
         margin-bottom: 21px;
     }
-}
-/* End Large Devices */
+} /* End Large Devices */
