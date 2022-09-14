@@ -1,0 +1,24 @@
+/* Start Small Devices */
+@media only screen and (max-width: 767px) {
+  
+}
+/* End Small Devices */
+
+/* Start Medium Devices */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+/* End Medium Devices */
+
+/* Start Large Devices */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    #histories {
+        flex-direction: row;
+    }
+    .card {
+        width: 30.33%;
+        flex-direction: column;
+        margin-bottom: 21px;
+    }
+}
+/* End Large Devices */
