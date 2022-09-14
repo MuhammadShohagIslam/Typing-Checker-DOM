@@ -4,6 +4,7 @@ const startBtn = document.getElementById("starts");
 const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
+const showTime = document.getElementById("show-time");
 
 // variables
 let userText = "";
@@ -16,7 +17,9 @@ fetch("./texts.json")
     .then((res) => res.json())
     .then((data) => {
         questionText = data[Math.floor(Math.random() * data.length)];
-        question.innerHTML = questionText;
+        if (question !== null) {
+            question.innerHTML = questionText;
+        }
     });
 
 // checks the user typed character and displays accordingly
@@ -137,7 +140,7 @@ const start = () => {
 };
 
 // START Countdown
-startBtn.addEventListener("click", start);
+startBtn?.addEventListener("click", start);
 
 // If history exists, show it
 displayHistory();
@@ -149,8 +152,10 @@ setInterval(() => {
     const timeSpentInteger = parseInt(timeSpent);
 
     if (startTime !== null) {
-        document.getElementById("show-time").innerHTML = `${
-            timeSpentInteger ? timeSpentInteger : 0
-        } seconds`;
+        if (showTime !== null) {
+            showTime.innerHTML = `${
+                timeSpentInteger ? timeSpentInteger : 0
+            } seconds`;
+        }
     }
 }, 1000);
