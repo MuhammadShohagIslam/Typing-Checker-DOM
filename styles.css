@@ -33,7 +33,6 @@ header {
     justify-content: center;
 }
 .navbar .navbar-item .nav-link {
-    padding-right: 13px;
     color: #ffff;
     font-size: 24px;
     transition: all 0.3s;
